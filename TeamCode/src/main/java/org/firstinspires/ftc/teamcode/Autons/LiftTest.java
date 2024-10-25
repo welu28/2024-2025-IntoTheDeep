@@ -7,18 +7,21 @@ import org.firstinspires.ftc.teamcode.Subsystems.Lift;
 
 @TeleOp
 public class LiftTest extends LinearOpMode {
-    public Lift lift;
 
     @Override
     public void runOpMode() throws InterruptedException {
         Lift lift = new Lift();
         lift.init(hardwareMap);
+
+        waitForStart();
+
         while(opModeIsActive()) {
-            if(gamepad1.a) {
-                lift.moveCC();
+
+            if(gamepad1.right_bumper) {
+                lift.moveUp();
             }
-            else if(gamepad1.b) {
-                lift.moveCW();
+            else if(gamepad1.left_bumper) {
+                lift.moveDown();
             }
             else {
                 lift.stop();

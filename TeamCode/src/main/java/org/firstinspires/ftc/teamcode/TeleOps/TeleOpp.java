@@ -16,16 +16,14 @@ public class TeleOpp extends LinearOpMode {
         waitForStart();
 
         while (opModeIsActive()) {
-            double strafe = -gamepad1.left_stick_y;
-            double power = gamepad1.left_stick_x;
-            double turn = -gamepad1.right_stick_x;
 
-            drive.move(power, strafe, turn);
+            drive.move(0.5,0,0);
+            sleep(250);
 
-            telemetry.addData("Power", power);
-            telemetry.addData("Strafe", strafe);
-            telemetry.addData("Turn", turn);
-            telemetry.update();
+//            telemetry.addData("Power", power);
+//            telemetry.addData("Strafe", strafe);
+//            telemetry.addData("Turn", turn);
+//            telemetry.update();
         }
     }
 }

@@ -7,16 +7,15 @@ public class Lift {
     public DcMotor lift;
 
     public void init(HardwareMap map) {
-        lift = map.dcMotor.get("Lift");
+        lift = map.dcMotor.get("lift");
         lift.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
     }
 
-    public void moveCC() {
-        lift.setPower(-0.69);
+    public void moveUp() {
+        lift.setPower(-0.3);
     }
-
-    public void moveCW() {
-        lift.setPower(0.69);
+    public void moveDown() {
+        lift.setPower(0.3);
     }
 
     public void stop() {
