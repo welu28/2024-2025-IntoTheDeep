@@ -12,7 +12,7 @@ import com.qualcomm.robotcore.hardware.DcMotor;
 public class PIDF extends LinearOpMode {
     private PIDController controller;
 
-    // PID coefficients that can be tuned from the FTC Dashboarde
+    // PID coefficients that can be tuned from the FTC Dashboardee
     public static double P = 0;
     public static double I = 0;
     public static double D = 0;
